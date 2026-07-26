@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clarisse Adetou — Développeuse Web</title>
+  <meta name="description" content="Portfolio de Clarisse Adetou, développeuse web en recherche d'alternance à Nantes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loader">
+  <div class="loader-logo">clarisse.dev</div>
+  <div class="loader-bar-wrap">
+    <div class="loader-bar"></div>
+  </div>
+  <div class="loader-txt">Chargement...</div>
+</div>
+
+<div id="scroll-bar"></div>
+
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Retour en haut">↑</button>
+
+<div class="mobile-nav" id="mobile-nav">
+  <a href="#about" onclick="closeMob()">A propos</a>
+  <a href="#skills" onclick="closeMob()">Competences</a>
+  <a href="#projects" onclick="closeMob()">Projets</a>
+  <a href="#education" onclick="closeMob()">Formation</a>
+  <a href="#contact" onclick="closeMob()">Contact</a>
+  <button onclick="closeMob()" style="color:rgba(255,255,255,0.4);font-size:0.85rem;background:none;border:none;cursor:pointer;margin-top:1rem;font-family:inherit;">Fermer</button>
+</div>
+
+<nav id="nav">
+  <span class="nav-logo">Clarisse.dev</span>
+  <ul class="nav-links">
+    <li><a href="#about">A propos</a></li>
+    <li><a href="#skills">Competences</a></li>
+    <li><a href="#projects">Projets</a></li>
+    <li><a href="#education">Formation</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="btn-dark" onclick="toggleDark()" title="Mode sombre">🌙</button>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=adetouclaris@mail.com" class="btn-nav">Me contacter</a>
+    <button class="hamburger" onclick="openMob()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="blob blob-a"></div>
+  <div class="blob blob-b"></div>
+  <div class="container">
+    <div class="hero-wrap">
+
+      <div>
+        <div class="hero-dispo">
+          <span class="dispo-dot"></span>
+          Disponible pour alternance septembre 2026
+        </div>
+
+        <h1 class="hero-name">
+          Bonjour, je suis<br>
+          <span class="grad-text">Clarisse Adetou</span>
+        </h1>
+
+        <div class="hero-typing">
+          Je suis&nbsp;
+          <span class="typed-word" id="typed"></span>
+          <span class="cursor-type"></span>
+        </div>
+
+        <p class="hero-desc">
+          Developpeuse web passionnee par les interfaces modernes et les projets concrets.
+          Bientot en Bachelor 3 a SUP DE VINCI, Nantes en recherche active d'alternance Front-end.
+        </p>
+
+        <div class="hero-btns">
+          <a href="ADETOUABLAESIACLARISSE-CV.pdf" class="btn-primary">Telecharger mon CV</a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=adetouclaris@mail.com" class="btn-outline">Me contacter</a>
+          <a href="https://github.com" target="_blank" class="btn-outline">GitHub</a>
+          <a href="https://www.linkedin.com/in/abla-esia-clarisse-adetou-601b15291/" target="_blank" class="btn-outline">LinkedIn</a>
+        </div>
+
+        <div class="hero-socials">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=adetouclaris@mail.com" class="social-btn" title="Email">✉</a>
+          <a href="tel:+22897379663" class="social-btn" title="Telephone">📞</a>
+          <a href="https://github.com" target="_blank" class="social-btn">🐙</a>
+          <a href="https://linkedin.com" target="_blank" class="social-btn">💼</a>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <div class="photo-ring">
+          <div class="photo-inner">👩🏾‍💻</div>
+        </div>
+        <div class="float-badge b1">
+          <div class="fb-num">5+</div>
+          <div class="fb-txt">Projets realises</div>
+        </div>
+        <div class="float-badge b2">
+          <div style="font-size:1rem;">🎓</div>
+          <div class="fb-txt" style="font-weight:700;">Bachelor 3</div>
+          <div class="fb-txt">SUP DE VINCI</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="scroll-arrow">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<section id="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item anim">
+        <div class="stat-num" data-count="5">0</div>
+        <div class="stat-lbl">Projets realises</div>
+      </div>
+      <div class="stat-item anim d1">
+        <div class="stat-num" data-count="3">0</div>
+        <div class="stat-lbl">Annees d'etudes</div>
+      </div>
+      <div class="stat-item anim d2">
+        <div class="stat-num" data-count="10">0</div>
+        <div class="stat-lbl">Technologies</div>
+      </div>
+      <div class="stat-item anim d3">
+        <div class="stat-num" data-count="100">0</div>
+        <div class="stat-lbl">Motivation</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section-pad">
+  <div class="container">
+    <div class="about-grid">
+
+      <div class="about-img-box anim-left">
+        <div class="about-img-inner">👩🏾‍💻</div>
+        <div class="about-deco1"></div>
+        <div class="about-deco2"></div>
+      </div>
+
+      <div class="anim-right">
+        <div class="tag-label">A propos</div>
+        <h2 class="section-title">Passionnee par le <span class="grad-text">web moderne</span></h2>
+        <p style="color:var(--gray-medium);line-height:1.8;font-size:0.98rem;">
+          Je suis <strong>Clarisse Adetou</strong>, developpeuse web passionnee par la creation d'interfaces modernes et performantes.
+          Apres ma <strong>Licence Informatique a l'ESGIS de Lome</strong>, j'integre le
+          <strong>Bachelor 3 Developpement Informatique a SUP DE VINCI</strong> a Nantes en septembre 2026.
+        </p>
+        <p style="color:var(--gray-medium);line-height:1.8;font-size:0.98rem;margin-top:0.875rem;">
+          Je recherche une alternance pour mettre en pratique mes competences, contribuer a des projets concrets et continuer a progresser aux cotes de professionnels.
+          J'aime apprendre, creer et construire des applications qui ont du sens.
+        </p>
+
+        <div class="about-tags">
+          <span class="chip">Front-end</span>
+          <span class="chip">Vue.js</span>
+          <span class="chip">Full-stack</span>
+          <span class="chip">Responsive</span>
+          <span class="chip">MySQL</span>
+          <span class="chip">Nantes</span>
+        </div>
+
+        <div class="about-info">
+          <div class="info-card">
+            <span class="info-card-icon">📍</span>
+            <div>
+              <div class="info-card-lbl">Localisation</div>
+              <div class="info-card-val">Nantes, France</div>
+            </div>
+          </div>
+          <div class="info-card">
+            <span class="info-card-icon">✉</span>
+            <div>
+              <div class="info-card-lbl">Email</div>
+              <div class="info-card-val" style="font-size:0.75rem;">adetouclaris@gmail.com</div>
+            </div>
+          </div>
+          <div class="info-card">
+            <span class="info-card-icon">📞</span>
+            <div>
+              <div class="info-card-lbl">Telephone</div>
+              <div class="info-card-val">97 37 96 63</div>
+            </div>
+          </div>
+          <div class="info-card">
+            <span class="info-card-icon">🎓</span>
+            <div>
+              <div class="info-card-lbl">Niveau</div>
+              <div class="info-card-val">Bachelor 3</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:1.75rem;">
+          <a href="ADETOUABLAESIACLARISSE-CV.pdf" class="btn-primary">Telecharger mon CV</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="container">
+    <div class="tag-label">Pourquoi moi ?</div>
+    <h2 class="section-title">Ce que j'apporte a <span class="grad-text">votre equipe</span></h2>
+    <p class="section-sub">Je ne cherche pas juste un contrat. Je cherche a apprendre, contribuer et progresser.</p>
+    <div class="why-cards">
+      <div class="why-card anim">
+        <div class="why-icon">🚀</div>
+        <div class="why-title">Autonomie et Rigueur</div>
+        <div class="why-text">J'apprends vite, je structure mon travail et je livre du code propre, lisible et documente.</div>
+      </div>
+      <div class="why-card anim d1">
+        <div class="why-icon">💡</div>
+        <div class="why-title">Curiosite constante</div>
+        <div class="why-text">Toujours en veille technologique. Ce que je ne sais pas encore, je l'apprends avec enthousiasme.</div>
+      </div>
+      <div class="why-card anim d2">
+        <div class="why-icon">🤝</div>
+        <div class="why-title">Esprit d'equipe</div>
+        <div class="why-text">A l'aise avec Git, GitHub et le travail collaboratif. J'ecoute, je m'adapte et je communique.</div>
+      </div>
+      <div class="why-card anim d3">
+        <div class="why-icon">🎯</div>
+        <div class="why-title">Projets concrets</div>
+        <div class="why-text">5 projets front-end realises gestion de bibliotheque, task manager, e-commerce, suivi de depenses et gestion de projets.</div>
+      </div>
+      <div class="why-card anim d4">
+        <div class="why-icon">🌍</div>
+        <div class="why-title">Ouverture d'esprit</div>
+        <div class="why-text">Parcours entre le Togo et la France. Adaptabilite, diversite et perspective internationale.</div>
+      </div>
+      <div class="why-card anim d5">
+        <div class="why-icon">📈</div>
+        <div class="why-title">Progression rapide</div>
+        <div class="why-text">En 3 ans, j'ai appris HTML, CSS, JavaScript, Vue.js, Node.js, Laravel et bien plus encore.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="section-pad">
+  <div class="container">
+    <div class="tag-label">Stack technique</div>
+    <h2 class="section-title">Mes <span class="grad-text">competences</span></h2>
+    <p class="section-sub">Front-end en priorite, avec une solide base et les bons outils de developpement.</p>
+
+    <div class="skills-filter" id="skill-filter">
+      <button class="f-btn on" onclick="filterS('all',this)">Tout voir</button>
+      <button class="f-btn" onclick="filterS('frontend',this)">Front-end</button>
+      <button class="f-btn" onclick="filterS('backend',this)">Back-end</button>
+      <button class="f-btn" onclick="filterS('bdd',this)">Base de donnees</button>
+      <button class="f-btn" onclick="filterS('tools',this)">Outils</button>
+    </div>
+
+    <div class="skills-grid" id="skills-grid">
+      <div class="skill-card anim" data-cat="frontend"><span class="s-emoji">🌐</span><div class="s-name">HTML5</div><div class="s-cat">Front-end</div></div>
+      <div class="skill-card anim d1" data-cat="frontend"><span class="s-emoji">🎨</span><div class="s-name">CSS3</div><div class="s-cat">Front-end</div></div>
+      <div class="skill-card anim d2" data-cat="frontend"><span class="s-emoji">⚡</span><div class="s-name">JavaScript</div><div class="s-cat">Front-end</div></div>
+      <div class="skill-card anim d3" data-cat="frontend"><span class="s-emoji">💚</span><div class="s-name">Vue.js</div><div class="s-cat">Front-end</div></div>
+      <div class="skill-card anim d4" data-cat="frontend"><span class="s-emoji">📱</span><div class="s-name">Responsive</div><div class="s-cat">Front-end</div></div>
+      <div class="skill-card anim d5" data-cat="frontend"><span class="s-emoji">🅱️</span><div class="s-name">Bootstrap</div><div class="s-cat">Front-end</div></div>
+      <div class="skill-card anim d5" data-cat="frontend"><span class="s-emoji">🔴</span><div class="s-name">Laravel</div><div class="s-cat">Front-end</div></div>
+      <div class="skill-card anim" data-cat="backend"><span class="s-emoji">🟢</span><div class="s-name">Node.js</div><div class="s-cat">Back-end</div></div>
+      <div class="skill-card anim d1" data-cat="backend"><span class="s-emoji">🚂</span><div class="s-name">Express.js</div><div class="s-cat">Back-end</div></div>
+      <div class="skill-card anim" data-cat="bdd"><span class="s-emoji">🗄️</span><div class="s-name">MySQL</div><div class="s-cat">Base de donnees</div></div>
+      <div class="skill-card anim" data-cat="tools"><span class="s-emoji">🔀</span><div class="s-name">Git</div><div class="s-cat">Outils</div></div>
+      <div class="skill-card anim d1" data-cat="tools"><span class="s-emoji">🐙</span><div class="s-name">GitHub</div><div class="s-cat">Outils</div></div>
+      <div class="skill-card anim d2" data-cat="tools"><span class="s-emoji">💻</span><div class="s-name">VS Code</div><div class="s-cat">Outils</div></div>
+      <div class="skill-card anim d3" data-cat="tools"><span class="s-emoji">🎛️</span><div class="s-name">Figma</div><div class="s-cat">Outils</div></div>
+      <div class="skill-card anim d4" data-cat="tools"><span class="s-emoji">📡</span><div class="s-name">Postman</div><div class="s-cat">Outils</div></div>
+      <div class="skill-card anim d5" data-cat="tools"><span class="s-emoji">🖥️</span><div class="s-name">XAMPP</div><div class="s-cat">Outils</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section-pad">
+  <div class="container">
+    <div class="tag-label">Mes projets</div>
+    <h2 class="section-title">Ce que j'ai <span class="grad-text">construit</span></h2>
+    <p class="section-sub">Des projets front-end realises pendant ma formation.</p>
+
+    <div class="proj-grid">
+
+      <div class="proj-card anim">
+        <div class="proj-img" style="background:linear-gradient(135deg,#F2E6D8,#E8D7C3);">
+          📚
+        </div>
+        <div class="proj-body">
+          <div class="proj-tags">
+            <span class="proj-tag">Vue.js</span>
+            <span class="proj-tag">Node.js</span>
+            <span class="proj-tag">HTML</span>
+            <span class="proj-tag">CSS</span>
+          </div>
+          <h3 class="proj-title">ClarisseNova</h3>
+          <p class="proj-desc">Application de gestion de bibliotheque avec interface moderne, recherche avancee et gestion de catalogue.</p>
+          <div class="proj-links">
+            <a href="https://github.com/CLARAlove12/ClarisseNova.git" target="_blank" class="btn-small">Voir le code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card anim d1">
+        <div class="proj-img" style="background:linear-gradient(135deg,#F0FDF4,#DCFCE7);">
+          ✅
+        </div>
+        <div class="proj-body">
+          <div class="proj-tags">
+            <span class="proj-tag">Vue.js</span>
+            <span class="proj-tag">Node.js</span>
+            <span class="proj-tag">HTML</span>
+            <span class="proj-tag">CSS</span>
+          </div>
+          <h3 class="proj-title">Task Manager</h3>
+          <p class="proj-desc">Gestionnaire de taches collaboratif avec backend Node.js, creation de projets, assignation, suivi de progression et notifications.</p>
+          <div class="proj-links">
+            <a href="https://github.com/CLARAlove12/Task-Manager" target="_blank" class="btn-small">Voir le code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJET GESTION DE PROJETS MIS EN COMMENTAIRE -->
+      <!--
+      <div class="proj-card anim d2">
+        <div class="proj-img" style="background:linear-gradient(135deg,#FDF4FF,#FAE8FF);">
+          📋
+        </div>
+        <div class="proj-body">
+          <div class="proj-tags">
+            <span class="proj-tag">Vue.js</span>
+            <span class="proj-tag">HTML</span>
+            <span class="proj-tag">CSS</span>
+            <span class="proj-tag">JavaScript</span>
+          </div>
+          <h3 class="proj-title">Gestion de projets</h3>
+          <p class="proj-desc">Plateforme collaborative avec tableaux de bord, suivi des tickets, gestion d'equipes et rapports d'avancement.</p>
+          <div class="proj-links">
+            <a href="https://github.com/CLARAlove12/gestion-projets" target="_blank" class="btn-small">Voir le code</a>
+          </div>
+        </div>
+      </div>
+      -->
+
+      <div class="proj-card anim d3">
+        <div class="proj-img" style="background:linear-gradient(135deg,#FFF7ED,#FED7AA);">
+          🛍️
+        </div>
+        <div class="proj-body">
+          <div class="proj-tags">
+            <span class="proj-tag">Laravel</span>
+            <span class="proj-tag">HTML</span>
+            <span class="proj-tag">CSS</span>
+            <span class="proj-tag">Blade</span>
+          </div>
+          <h3 class="proj-title">E-commerce</h3>
+          <p class="proj-desc">Boutique en ligne avec catalogue, panier, paiement simule, espace admin et authentification securisee.</p>
+          <div class="proj-links">
+            <a href="https://github.com/CLARAlove12/E-commerce.git" target="_blank" class="btn-small">Voir le code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card anim d4">
+        <div class="proj-img" style="background:linear-gradient(135deg,#FFF1F2,#FFE4E6);">
+          💰
+        </div>
+        <div class="proj-body">
+          <div class="proj-tags">
+            <span class="proj-tag">Vue.js</span>
+            <span class="proj-tag">HTML</span>
+            <span class="proj-tag">CSS</span>
+            <span class="proj-tag">JavaScript</span>
+          </div>
+          <h3 class="proj-title">Suivi de depenses</h3>
+          <p class="proj-desc">Application de suivi des depenses avec categories, graphiques, filtres et export de donnees.</p>
+          <div class="proj-links">
+            <a href="https://github.com/CLARAlove12/Suivie-de-depenses.git" target="_blank" class="btn-small">Voir le code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card anim d5" style="border-style:dashed;">
+        <div class="proj-img" style="background:transparent;border-bottom:1px dashed var(--border);"></div>
+        <div class="proj-body">
+          <div class="proj-tags"><span class="proj-tag">Bientot...</span></div>
+          <h3 class="proj-title">Prochain projet</h3>
+          <p class="proj-desc">Je travaille en permanence sur de nouveaux projets. Suivez mon GitHub pour ne rien rater !</p>
+          <div class="proj-links">
+            <a href="https://github.com/CLARAlove12" target="_blank" class="btn-small">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="education" class="section-pad">
+  <div class="container" style="text-align:center;">
+    <div class="tag-label" style="display:inline-flex;">Formation</div>
+    <h2 class="section-title">Mon <span class="grad-text">parcours</span></h2>
+    <p class="section-sub" style="margin:0.875rem auto;">De Lome a Nantes, portee par la passion de l'informatique.</p>
+
+    <div class="tl-wrap">
+
+      <div class="tl-item anim">
+        <div class="tl-content">
+          <div class="tl-card">
+            <div class="tl-year">Sept 2020 Juil 2021</div>
+            <div class="tl-ttl">Baccalaureat Serie Scientifique</div>
+            <div class="tl-school">Lycee La Maitrise</div>
+            <div class="tl-loc">Lome, Togo</div>
+          </div>
+        </div>
+        <div class="tl-dot-col"><div class="tl-dot">🎓</div></div>
+        <div class="tl-side"></div>
+      </div>
+
+      <div class="tl-item anim d2">
+        <div class="tl-side"></div>
+        <div class="tl-dot-col"><div class="tl-dot">💻</div></div>
+        <div class="tl-content">
+          <div class="tl-card">
+            <div class="tl-year">Oct 2022 Oct 2025</div>
+            <div class="tl-ttl">Licence Informatique</div>
+            <div class="tl-school">ESGIS</div>
+            <div class="tl-loc">Lome, Togo</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item anim d3">
+        <div class="tl-content">
+          <div class="tl-card special">
+            <div class="tl-year">Sept 2026 Sept 2027</div>
+            <div class="tl-ttl" style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">
+              Bachelor 3 Developpement Informatique
+            </div>
+            <div class="tl-school">SUP DE VINCI</div>
+            <div class="tl-loc">Nantes, France</div>
+            <span class="tl-badge-dispo">Recherche alternance</span>
+          </div>
+        </div>
+        <div class="tl-dot-col"><div class="tl-dot">🚀</div></div>
+        <div class="tl-side"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="dispo">
+  <div class="container">
+    <div class="tag-label" style="display:inline-flex;">Disponibilite</div>
+    <h2 class="section-title">Prete pour l'<span class="grad-text">alternance</span></h2>
+    <p class="section-sub">Activement a la recherche d'une alternance en developpement Front-end pour septembre 2026.</p>
+    <div class="dispo-box anim">
+      <div class="dispo-status">
+        <div class="dispo-dot"></div>
+        <span class="dispo-txt">Disponible septembre 2026</span>
+      </div>
+      <div class="dispo-info">1 semaine ecole / 3 semaines entreprise (rythme indicatif)</div>
+      <div class="dispo-chips">
+        <span class="dispo-chip">Nantes & region</span>
+        <!-- <span class="dispo-chip">Paris</span> -->
+        <span class="dispo-chip">Front-end</span>
+      </div>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-top:0.5rem;">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=adetouclaris@mail.com" class="btn-primary">Me contacter</a>
+        <a href="ADETOUABLAESIACLARISSE-CV.pdf" class="btn-outline" style="color:white;border-color:rgba(255,255,255,0.2);">Telecharger le CV</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="learning" class="section-pad">
+  <div class="container">
+    <div class="tag-label">En ce moment</div>
+    <h2 class="section-title">Ce que j'apprends <span class="grad-text">actuellement</span></h2>
+    <div class="learning-grid">
+      <div class="learn-card anim"><span class="learn-icon">💨</span><div><div class="learn-name">Tailwind CSS</div><div class="learn-sub">Framework CSS utility-first</div></div></div>
+      <div class="learn-card anim d1"><span class="learn-icon">⚛️</span><div><div class="learn-name">Vue 3 Composition API</div><div class="learn-sub">Approfondissement</div></div></div>
+      <div class="learn-card anim d2"><span class="learn-icon">🌿</span><div><div class="learn-name">Git avance</div><div class="learn-sub">Branches and Pull Requests</div></div></div>
+      <div class="learn-card anim d3"><span class="learn-icon">🎨</span><div><div class="learn-name">UI/UX Design</div><div class="learn-sub">Figma et principes design</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="perspectives" class="section-pad">
+  <div class="container">
+    <div class="tag-label">Perspectives</div>
+    <h2 class="section-title">Mon <span class="grad-text">projet d'avenir</span></h2>
+    <p class="section-sub">A la suite de mon Bachelor, je souhaite poursuivre mes etudes en Master Infrastructure, Cloud et DevOps.</p>
+
+    <div class="perspectives-grid">
+      <div class="persp-card anim">
+        <span class="persp-icon">☁️</span>
+        <h3 class="persp-title">Cloud</h3>
+        <p class="persp-desc">Maitrise des plateformes cloud modernes (AWS, Azure, GCP) pour le deploiement d'applications scalables.</p>
+      </div>
+      <div class="persp-card anim d1">
+        <span class="persp-icon">🏗️</span>
+        <h3 class="persp-title">Infrastructure</h3>
+        <p class="persp-desc">Gestion d'infrastructures robustes, virtualisation, reseaux et administration systeme.</p>
+      </div>
+      <div class="persp-card anim d2">
+        <span class="persp-icon">🔄</span>
+        <h3 class="persp-title">DevOps</h3>
+        <p class="persp-desc">Automatisation des pipelines CI/CD, orchestration avec Kubernetes et monitoring.</p>
+      </div>
+    </div>
+
+    <div class="anim" style="text-align:center;margin-top:2.5rem;max-width:700px;margin-left:auto;margin-right:auto;">
+      <div style="background:var(--ivory);border:1px solid var(--border);border-radius:16px;padding:1.75rem;">
+        <p style="color:var(--gray-medium);line-height:1.8;font-size:0.95rem;">
+          A la suite de mon Bachelor en Developpement Informatique, je souhaite poursuivre mes etudes en
+          <strong style="color:var(--light-coffee);">Master Infrastructure, Cloud et DevOps</strong>
+          afin de developper une expertise dans le deploiement, l'automatisation et la gestion d'infrastructures informatiques modernes.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="extras" class="section-pad">
+  <div class="container">
+    <div class="extras-grid">
+      <div class="anim-left">
+        <div class="tag-label">Langues</div>
+        <h3 class="section-title" style="font-size:1.75rem;">Langues</h3>
+        <div style="margin-top:1.25rem;">
+          <div class="lang-card">
+            <span class="lang-icon">🇫🇷</span>
+            <div><div class="lang-name">Francais</div><div class="lang-level">Langue maternelle Courant</div></div>
+          </div>
+          <div class="lang-card">
+            <span class="lang-icon">🇬🇧</span>
+            <div><div class="lang-name">Anglais</div><div class="lang-level">Niveau intermediaire B1/B2</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="anim-right">
+        <div class="tag-label">Centres d'interet</div>
+        <h3 class="section-title" style="font-size:1.75rem;">Passions</h3>
+        <div class="interest-chips">
+          <span class="interest-chip">Voyages</span>
+          <span class="interest-chip">Musique</span>
+          <span class="interest-chip">Lecture</span>
+          <span class="interest-chip">Developpement Web</span>
+          <span class="interest-chip">Design UI/UX</span>
+          <span class="interest-chip">Open Source</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section-pad">
+  <div class="container">
+    <div class="tag-label">Contact</div>
+    <h2 class="section-title">Parlons de votre <span class="grad-text">projet</span></h2>
+    <p class="section-sub">Recruteur ou simplement curieux ? Je reponds sous 24 heures.</p>
+
+    <div class="contact-wrap" style="margin-top:2.5rem;">
+      <div>
+        <h3 style="font-size:1.05rem;font-weight:700;margin-bottom:1.1rem;">Mes coordonnees</h3>
+        <a href="mailto:adetouclaris@gmail.com" class="contact-item">
+          <div class="c-ico">✉</div>
+          <div><div class="c-lbl">Email</div><div class="c-val">adetouclaris@gmail.com</div></div>
+        </a>
+        <a href="tel:+22897379663" class="contact-item">
+          <div class="c-ico">📞</div>
+          <div><div class="c-lbl">Telephone</div><div class="c-val">97 37 96 63</div></div>
+        </a>
+        <div class="contact-item">
+          <div class="c-ico">📍</div>
+          <div><div class="c-lbl">Localisation</div><div class="c-val">Nantes, France</div></div>
+        </div>
+        <a href="https://linkedin.com" target="_blank" class="contact-item">
+          <div class="c-ico">💼</div>
+          <div><div class="c-lbl">LinkedIn</div><div class="c-val">Clarisse Adetou</div></div>
+        </a>
+        <a href="https://github.com/CLARAlove12" target="_blank" class="contact-item">
+          <div class="c-ico">🐙</div>
+          <div><div class="c-lbl">GitHub</div><div class="c-val">github.com/CLARAlove12</div></div>
+        </a>
+        <p style="font-size:0.8rem;color:var(--gray-medium);margin-top:1.25rem;line-height:1.7;">
+          <strong>Recruteurs</strong> : n'hesitez pas a me contacter directement par email !
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <span class="footer-logo">Clarisse.dev</span>
+      <div class="footer-links">
+        <a href="#about">A propos</a>
+        <a href="#skills">Competences</a>
+        <a href="#projects">Projets</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=adetouclaris@mail.com" class="f-social">✉</a>
+        <a href="https://github.com/CLARAlove12" target="_blank" class="f-social">🐙</a>
+        <a href="https://linkedin.com/in/clarisse-adetou-18694b327/" target="_blank" class="f-social">💼</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">2026 Clarisse Adetou Tous droits reserves</span>
+      <span class="footer-made">Concu et developpe avec ❤ par Clarisse</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js">
+</script>
+
+
+</body>
+</html>
